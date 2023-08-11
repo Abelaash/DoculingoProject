@@ -29,6 +29,9 @@ function App(){
             <div>
                 <textarea cols="50" row="8"></textarea>
             </div>
+            <div>
+                <button>Translate language</button>
+            </div>
         </div>
     )
 }
