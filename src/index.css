@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@700&family=Lato:wght@300&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +12,54 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav {
+  background-color: #3498db;
+  display: flex;
+  color: white;
+  padding: 0 1rem;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.site-name {
+  color: white;
+  text-decoration: none;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  font-size: 2rem;
+  padding: 4px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.textbox {
+  padding: 0 1 rem;
+}
+
+.page {
+  margin: 50px;
+  font-family: 'Lato', sans-serif;
+}
+
+.page h1 {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.document-text {
+  background-color: #ecf0f1;
+  border: 2px transparent;
+  border-radius: 15px;
+  padding: 1em;
 }
