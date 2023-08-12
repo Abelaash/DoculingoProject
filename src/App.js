@@ -15,7 +15,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/translate" element={<Translate />} />
-
         </Routes>
       </div>
      </div> 

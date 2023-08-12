@@ -19,44 +19,73 @@ export default function Translate() {
 
     return (
         <div className="page">
-        <h1>Translate</h1>
-        <div className="textbox">
-        From ({from}) :
-        <select onChange={(e) => setFrom(e.target.value)}>
-          {options.map((opt) => (
-            <option key={opt.code} value={opt.code}>
-              {opt.name}
-            </option>
-          ))}
-        </select>
-        To ({to}) :
-        <select onChange={(e) => setTo(e.target.value)}>
-          {options.map((opt) => (
-            <option key={opt.code} value={opt.code}>
-              {opt.name}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div>
-        <textarea
-          cols="70"
-          rows="30"
-          class="document-text"
-          placeholder="Upload your document here..."
-          onInput={(e) => setInput(e.target.value)}
-        ></textarea>
-      </div>
-      <div>
-        <textarea 
-            cols="10" 
-            rows="1" 
-            value={output}>
-        </textarea>
-      </div>
-      <div>
-        <button onClick={e=>translate()}>Translate</button>
-      </div>
-      </div>
+            <h1>Translate</h1>
+            <div className="textbox">
+                    From ({from}) :
+                    <select onChange={(e) => setFrom(e.target.value)}>
+                    {options.map((opt) => (
+                        <option key={opt.code} value={opt.code}>
+                        {opt.name}
+                        </option>
+                    ))}
+                    </select>
+                    To ({to}) :
+                    <select onChange={(e) => setTo(e.target.value)}>
+                    {options.map((opt) => (
+                        <option key={opt.code} value={opt.code}>
+                        {opt.name}
+                        </option>
+                    ))}
+                    </select>
+                </div>
+            <div className="container">
+                <div>
+                    <textarea
+                    cols="70"
+                    rows="30"
+                    class="document-text"
+                    placeholder="Upload your document here..."
+                    onInput={(e) => setInput(e.target.value)}
+                    ></textarea>
+                </div>
+                <div className="words-container">
+                    <div>
+                        <textarea
+                            cols="22" 
+                            rows="1" 
+                            placeholder="Copy your word here..."
+                            class="word-textarea">  
+                        </textarea>
+                    </div>
+                    <div>
+                        <button 
+                            class="translate-button"
+                            onClick={e=>translate()}
+                        >
+                            Translate
+                        </button>
+                    </div>
+                    <div>
+                        <textarea readOnly
+                            cols="22" 
+                            rows="1" 
+                            className="word-textarea"
+                            placeholder="Translation loading..."
+                            value={output}>
+                        </textarea>
+                    </div>
+                </div>
+                <div>
+                    <textarea readOnly
+                        className="learned-words-textarea"
+                        cols="20"
+                        rows="20"
+                        placeholder="Your Learned Words:"
+                        >
+
+                    </textarea>
+                </div>
+            </div>
+        </div>
     );
 };

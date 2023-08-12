@@ -60,6 +60,79 @@ code {
 .document-text {
   background-color: #ecf0f1;
   border: 2px transparent;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 1em;
 }
+
+.translate-button {
+  background: #3498db;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  color: white;
+  padding: 16px;
+  border-radius: 14px;
+}
+
+.word-textarea {
+  font-size: 1rem;
+  background-color: #C6DDED;
+  resize: none;
+  border: #C6DDED;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+}
+
+.words-container {
+  align-items: center;
+  margin: 20px;
+  text-align: center;
+}
+
+.learned-words-textarea {
+  background: #D9D9D9;
+  border: transparent;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+}
+
+.headline {
+  font-size: 4rem;
+  color: #3498db;
+}
+
+.caption {
+  font-size: 1.5rem;
+  color: #7C7C7C;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.get-started-button {
+  border: 1px solid #3498db;
+  color: white;
+  background: #3498db;
+  
+  font-family: 'Be Vietnam Pro', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 14px;
+  margin-top: 4rem;
+  cursor: pointer;
+  transition: 0.6s;
+
+}
+
+.get-started-button:hover {
+  color: grey;
+  background: none;
+}
+
