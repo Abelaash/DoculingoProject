@@ -1,5 +1,6 @@
 import {useEffect, useState} from  'react'; 
 import jwt_decode from 'jwt-decode';
+import {useNavigate} from "react-router-dom";
 
 //important
 let client_id = "940292526044-ibg5umv7i658tdlqffuanjg1049ab93o.apps.googleusercontent.com"; 
@@ -7,6 +8,7 @@ let client_id = "940292526044-ibg5umv7i658tdlqffuanjg1049ab93o.apps.googleuserco
 
 function Login() {
   let [user, setUser] = useState({})
+  const navigate = useNavigate();
 
   function handleCallbackResponse(response) {
     console.log("Encoded JWT ID token: " + response.credential); 
@@ -37,18 +39,23 @@ function Login() {
   }, []) 
 
   return (
+    <div className="page">
     <div className="Login">
-      <div id="signInDiv"> </div> 
-      {
-        Object.keys(user).length != 0 &&
-        <button id="signOutButton" onClick = { (e)=> handleSignOut(e)}>Sign Out</button> 
-      }
+      <div id="signInDiv" className="sign-in-container"> </div> 
       {  user && 
         <div>
-          <img src={user.picture}></img>
+          <img src={user.picture} className="profile-pic"></img>
           <h3>{user.name}</h3>
         </div>
       }
+      {
+        Object.keys(user).length != 0 &&
+        navigate("/translate")
+        /*
+        <button id="signOutButton" className="sign-out-btn" onClick = { (e)=> handleSignOut(e)}>Sign Out</button> 
+        */
+      }
+    </div>
     </div>
   ); 
 }
