@@ -42,6 +42,8 @@ code {
   list-style: none;
   padding: 0;
   font-family: 'Be Vietnam Pro', sans-serif;
+  display: flex;
+  gap: 2rem;
 }
 
 .textbox {
@@ -62,6 +64,7 @@ code {
   border: 2px transparent;
   border-radius: 10px;
   padding: 1em;
+  resize: none;
 }
 
 .translate-button {
@@ -136,3 +139,19 @@ code {
   background: none;
 }
 
+.sign-out-btn {
+  background: #3498db;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 16px;
+  color: white;
+  padding: 12px;
+  border-radius: 14px;
+}
+
+.profile-pic {
+  margin-left: auto;
+  height: auto;
+}
