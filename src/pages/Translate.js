@@ -54,7 +54,54 @@ export default function Translate() {
                     ))}
                 </select>
             </div>
-            {/* The rest of the code remains unchanged */}
+            <div className="container">
+                <div>
+                    <textarea
+                    cols="70"
+                    rows="30"
+                    class="document-text"
+                    placeholder="Upload your document here..."
+                    onInput={(e) => setInput(e.target.value)}
+                    ></textarea>
+                </div>
+                <div className="words-container">
+                    <div>
+                        <textarea
+                            cols="22" 
+                            rows="1" 
+                            placeholder="Copy your word here..."
+                            class="word-textarea">  
+                        </textarea>
+                    </div>
+                    <div>
+                        <button 
+                            class="translate-button"
+                            onClick={e=>translate()}
+                        >
+                            Translate
+                        </button>
+                    </div>
+                    <div>
+                        <textarea readOnly
+                            cols="22" 
+                            rows="1" 
+                            className="word-textarea"
+                            placeholder="Translation loading..."
+                            value={output}>
+                        </textarea>
+                    </div>
+                </div>
+                <div>
+                    <textarea readOnly
+                        className="learned-words-textarea"
+                        cols="20"
+                        rows="20"
+                        placeholder="Your Learned Words:"
+                        >
+
+                    </textarea>
+                </div>
+            </div>
         </div>
     );
 };
