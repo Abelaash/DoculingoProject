@@ -162,3 +162,16 @@ code {
   margin-left: auto;
   height: auto;
 }
+
+.upload-file-btn {
+  background: #3498db;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  font-size: 14px;
+  color: white;
+  padding: 6px;
+  border-radius: 14px;
+  cursor: pointer;
+}

@@ -33,10 +33,11 @@ function FileUpload() {
 
     return (
         <div>
-            <input type="file" id="uploadedFile" name="file" onChange={handleFileChange}/>
+            <input type="file" id="uploadedFile" name="file" className="choose-file" onChange={handleFileChange}/>
             <button
                 type="button" 
                 id="btnUpload" 
+                className="upload-file-btn"
                 onClick={handleFileUpload}>Upload PDF</button>
             <div>
                     <textarea
@@ -44,7 +45,7 @@ function FileUpload() {
                     rows="30"
                     id="extractedText"
                     class="document-text"
-                    placeholder="Upload your document here..."
+                    placeholder="PDF text will show up here..."
                     value={pdfText}
                     // onInput={(e) => setInput(e.target.value)}
                     ></textarea>
