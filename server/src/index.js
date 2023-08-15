@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const fileUpload = require('express-fileupload');
 const pdfParser = require("pdf-parse");
+const parseGDoc = require("./parseGDoc")
 
 const app = express();
 
@@ -27,6 +28,11 @@ app.post('/upload', (req, res) => {
     pdfParser(pdfFile).then(result => {
         res.send(result.text);
     });
-    
-    
 });
+
+app.get('/link/*', async (req, res) => {
+
+  const linkId = req.originalUrl.substring(6);
+   
+  fetch("https://docs.googleapis.com/v1/documents/" + linkId).then(data=>data.json()).then(data=>{return parseGDoc(data);}).then(data=>res.send(data))
+})

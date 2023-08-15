@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Translate from "./pages/Translate";
-import Login from "./components/Authentication/Login"
 
 function App() {
 
@@ -16,7 +15,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/translate" element={<Translate />} />
-          <Route path="/login" element={<Login />} />
         </Routes>
       </div>
      </div> 
