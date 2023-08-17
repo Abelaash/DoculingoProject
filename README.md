@@ -1,5 +1,5 @@
 # Doculingo
-Creating using AWS EC2, Reactjs, Expressjs, Google Cloud Platformm and more.
+Creating using AWS EC2, Reactjs, Expressjs, Google Cloud Platform and more.
 
 Doculingo is a multi-page React app with pdf parsing capabilities which allows for easy fetching of text from either
 a PDF or a Google Doc. Use our translation feature to translate any word to French, Spanish and more with ease.
