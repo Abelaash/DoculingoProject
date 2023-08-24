@@ -87,6 +87,7 @@ function FileUpload() {
                     className="document-text"
                     placeholder="PDF text will show up here..."
                     value={pdfText}
+                    readOnly
                     // onInput={(e) => setInput(e.target.value)}
                     ></textarea>
                 </div>    
