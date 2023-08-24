@@ -6,4 +6,5 @@ a PDF or a Google Doc. Use our translation feature to translate any word to Fren
 
 Please visit [http://doculingo.online] to try out our app. 
 
-![image](https://github.com/Abelaash/DoculingoProject/assets/29319134/52461867-0d17-4500-b470-5b6a8d3ce85b)
+![image](https://github.com/Abelaash/DoculingoProject/assets/29319134/6d95be99-009a-418a-8282-b26f90a60ce4)
+
