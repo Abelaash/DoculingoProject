@@ -38,8 +38,16 @@ app.get('/link/*', async (req, res) => {
 
   const linkId = req.originalUrl.substring(6);
    
-  fetch("https://docs.googleapis.com/v1/documents/" + linkId).then(data=>data.json()).then(data=>{return parseGDoc(data);}).then(data=>res.send(data))
+  fetch("https://docs.googleapis.com/v1/documents/" + linkId)
+  .then(res=> { if(!res.ok) throw new Error("Invalid server status code."); return res})
+  .then(res=>res.json())
+  .then(data=>{return parseGDoc(data);})
+  .then(data=>res.send(data))
+  .catch(err=>
+  {res.send("Invalid link. Please check if you entered the correct link, or sign in to Google again.")})
+
 })
+
 
 app.get('/translate*', async (req, res) => {
     var input = req.query.q;
@@ -79,7 +87,14 @@ app.get('/translate*', async (req, res) => {
                     }
                 }
                 res.send(findResult.translation)
-            }
+            }   
+            break; 
+            default: {
+                findResult = { translation: [input]}
+                res.status(201); //makes sure the word doesn't get added to learned words list
+                res.send(findResult.translation)
+            } 
+            break;
         }
     }
     console.log("Translate query complete: " + input + " => " + findResult.translation)
@@ -90,8 +105,9 @@ app.listen(4000, () => {
     console.log("Please wait before making any queries (approx. 30 seconds)")
     //The following assumes that if MongoDB is running, it will contain a
     //db named "Translate" which contains our dicitonaries
-
+    
     //If mongodb is not running, then it parses local dictionaries instead
+    
     MongoClient.connect('mongodb://127.0.0.1:27017').then(client => {
         translateDB = client.db('Translate')
         connectedToDB = true

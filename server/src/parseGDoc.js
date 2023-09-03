@@ -36,7 +36,7 @@ function read_structural_elements(elements) {
       text += read_structural_elements(toc['content'])
     }
   }
-  console.log(text)
+  // console.log(text)
   return text;
 }
 

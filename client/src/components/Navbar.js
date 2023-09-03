@@ -11,9 +11,9 @@ export default function Navbar() {
                 <li>
                     <Link to="/translate">Translate</Link>
                 </li>
-                <li>
+                {/* <li>
                     <Link to="/login">Login</Link>
-                </li>
+                </li> */}
             </ul>    
         </nav>
     )

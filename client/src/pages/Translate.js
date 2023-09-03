@@ -44,7 +44,7 @@ export default function Translate() {
                 // Add more languages here
             ];
             setOptions(languageOptions);
-        };
+        }; 
         fetchLanguages();
     }, []);
 
