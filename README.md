@@ -1,4 +1,4 @@
-# Doculingo
+# DocuLingo
 Created using AWS EC2, React.js, Express.js, MongoDB, Google Cloud Platform and more.
 
 Doculingo is a multi-page React application with PDF parsing capabilities which allows for easy fetching of text from either
